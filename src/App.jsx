@@ -9,16 +9,30 @@ function App() {
         {id:3, text: "comment three"}
     ]
 
-    return (
-    <div className="container">
-        <h1>{title}</h1>
-        <p>{body.toUpperCase()}</p>
+    const loading = false
+    const showComents = true
 
+    if (loading) return <h1>Loading...</h1>
+
+    const commentBlock = (
         <div className='comments'>
             {comments.map((comment, index) => {
                 return <li key={comment.id}>{comment.text}</li>
             })}    
         </div>  
+        )
+    
+
+    return (
+    <div className="container">
+        <h1>{title}</h1>
+        <p>{body}</p>
+
+        {showComents && commentBlock}
+
+        <p>{body.toUpperCase()}</p>
+
+        
     </div>
     )
 }
