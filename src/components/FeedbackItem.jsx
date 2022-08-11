@@ -1,24 +1,10 @@
 import React from 'react'
-import { useState } from 'react'
-import { useRef } from 'react'
 
-function FeedbackItem() {
-    const [rating, setRating] = useState(7)
-    const [text, setText] = useState("This is an example of a feedback item")
-
-    const handleClick = () => {
-        setRating((prev) => {
-            console.log(prev)
-            return prev+1
-        }) 
-    }
-    return (
-    <div className='card'>
-        <div className="num-display">{rating}</div>
-        <div className="text-display">{text}</div>
-        <button onClick={handleClick}> Click </button>
+function FeedbackItem({item}) {
+    return <div className='card'>
+        <div className="num-display">{item.rating}</div>
+        <div className="text-display">{item.text}</div>
     </div>
-  )
 }
 
 export default FeedbackItem
