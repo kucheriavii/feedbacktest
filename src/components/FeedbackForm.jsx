@@ -4,7 +4,9 @@ import Card from './shared/Card';
 
 
 export default function FeedbackForm() {
-  const [text, setText] = useState('')
+  const [text, setText] = useState('');
+  const [btnDisabled, steBtnDisabled] = useState(true);
+  const [message, setMessage] = useState('')
 
   const handleTextChange = (e) => {
     setText(e.target.value)
@@ -20,9 +22,10 @@ export default function FeedbackForm() {
               placeholder='write a review' 
               onChange={handleTextChange} 
               value={text} />
-          <Button type='submit'>Send</Button>
+          <Button type='submit' isDisabled={btnDisabled}>Send</Button>
         </div>
       </form>
     </Card>
   )
 }
+
