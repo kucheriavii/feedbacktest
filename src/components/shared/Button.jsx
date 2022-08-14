@@ -2,7 +2,6 @@ import React from 'react'
 import { PropTypes } from 'prop-types';
 
 export default function Button({children, version, type, isDisabled}) {
-    console.log(isDisabled)
   return (
     <button type={type} disabled={isDisabled} className={`btn btn-${version}`}>
         {children}
