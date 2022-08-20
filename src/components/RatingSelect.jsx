@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 
 export default function RaitingSelect({select}) {
-    const [selected, setSelected] = useState(2)
+    const [selected, setSelected] = useState(5)
     const handleChange = (e) => {
         setSelected(+e.currentTarget.value)
         select(+e.currentTarget.value)
