@@ -9,7 +9,7 @@ export const FeedbackProvider = ({children}) => {
         {
             id: 1,
             text: "This item is feedback item 1"  ,
-            rating: 10      
+            rating: 5      
         },
         {
             id: 2,
@@ -53,7 +53,8 @@ export const FeedbackProvider = ({children}) => {
         feedback,
         deleteFeedback,
         addFeedback,
-        editFeedback
+        editFeedback,
+        feedbackEdit
     }}>
         {children}
     </FeedbackContext.Provider>)
